@@ -6,3 +6,8 @@ The *ice* folder contains in-class exercises.
 
 ## About Me
 This should be replaced.
+
+Alex Baez
+https://www.linkedin.com/in/alex-b-292522ab/
+
+I am seeking a postion as a Digital Media Marketer.
