@@ -6,6 +6,19 @@
     "configurations": [
         
         {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}/ice/w4/src",
+            "trace":"verbose",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+              "*": "${webRoot}/*"
+            }
+
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
