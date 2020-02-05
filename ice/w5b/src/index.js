@@ -21,7 +21,6 @@ function onClick() {
         console.log("INPUT IS TRUE");
     }
     
-    
 }
 
 window.addEventListener("DOMContentLoaded", runOnLoad);
