@@ -1,9 +1,34 @@
-function Sum (a, b) {
-  return a+b
+function AddList (arr) {
+  let result = undefined;
+  if(Array.isArray(arr) && arr.lenth > 0){
+    result = 0;
+    for(var i = 0; i < arr.length; i++){
+      if(typeof arr[i] != "number"){
+        result=undefined;
+        break;
+      }
+      result = result + arr[i];
+    }
+  }
+  return result;
 }
 
-console.log(Sum(2,3)==5);
-console.log(Sum(-10,-20)==-30);
-console.log(Sum(-10,"Twenty"));
 
-export { Sum };
+function DivideBy (a, b) {
+
+
+}
+
+function ContainsString () {
+
+}
+
+function ReSortedNumbers () {
+
+}
+
+function Adder () {
+
+}
+
+export { AddList };

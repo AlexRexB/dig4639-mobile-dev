@@ -1,11 +1,38 @@
-import { Sum } from './MyMath.js'
+import { AddList } from './MyMath.js'
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(Sum(1, 2)).toBe(3)
+describe("AddList", () => {
+
+  test('Adds a list of numbers together', () => {
+    let numElem = 1000;
+    let input = [];
+    let result = 0;
+    var elem = 0;
+    for(var j = 0; j < 10; j++) {
+      for(var i = 0; i < numElem; i++){
+        elem = Math.random()*1000;
+        result += elem;
+        input.push(elem);
+      }
+      expect(AddList(input)).toBe(result);
+    }
+  })
+  test('Test if empty array returns undefined', () => {
+    let input = [];
+    expect(AddList(input)).toBeUndefined();
+  })
+  test('Tests if element array returns undefined', () => {
+    let input = [undefined, 0, 2, 3];
+    expect(AddList(input)).toBeUndefined();
+  })
+  test('Tests if non-array returns undefined', () => {
+    let input = 100;
+    expect(AddList(input)).toBeUndefined();
+  })
+
+
 })
-it('adds 10 + 20 to equal 30', () => {
-  expect(Sum(10, 20)).toBe(30)
-})
+ 
+
 
 // ICE 
 
