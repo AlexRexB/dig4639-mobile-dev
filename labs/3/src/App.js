@@ -4,7 +4,7 @@ import Card from "./components/card/index.js";
 function App() {
   return (
     <div className="App">
-      <Card contents="This is a card!"></Card>
+      <Card content="This is a card!"></Card>
     </div>
   );
 }
