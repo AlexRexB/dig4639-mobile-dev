@@ -1,25 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+const todoList = [
+  {
+      content: 'Task 1', priority: 2, completed: true
+  },
+  {
+      content: 'Task 2', priority: 1, completed: true
+  },
+  {
+      content: 'Task 3', priority: 3, completed: false
+  },
+]
+function TodoItem(props) {
+  return <p>{props.content}</p>
+}
 
 function App() {
+  const todoListFlitered = todoList.filter((value) => value.completed)
+
+  let todoArray = todoListFlitered.map(
+    (value) => <TodoItem content={value.content} />
+  )
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    todoList.filter((v) => v.completed).map(
+      (v) => <TodoItem priority = {v.priority} content={v.content} completed={v.completed}/>)
   );
 }
 
