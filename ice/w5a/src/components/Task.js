@@ -7,9 +7,9 @@ class Task {
         checkbox.addEventListener("change", this.unputChanged);
         this.element.appendChild(checkbox);
         let taskText = document.createElement("span");
-        taskText.innerHTML = props.content;
-        this.element.appendChild(taskText);
-   } 
+        taskText.innerHTML = props.content
+        this.element.appendChild(taskText)
+   }
 
     render() {
         return this.element;
