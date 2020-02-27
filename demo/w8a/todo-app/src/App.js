@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import todoList from './todoList.json'
 
-
-
-
+// Filter list based on a checkbox
+// Add an input form to allow creating TODO items with content & priority
+// Have each item be able to remove itself using a function passed in from the parent
 
 function TodoItem(props) {
   return <p className ='card' onClick={() => props.removeTask(props.id)}>{props.content}</p>
@@ -15,7 +15,7 @@ class TodoList extends React.Component {
     super(props)
       this.state = {
         todoList,
-        hideCompletedItems:false
+        hideCompletedItems:false,
       }
       this.currentId = 4;
     }
@@ -23,7 +23,7 @@ class TodoList extends React.Component {
       console.log(this.refs.taskContent)
       let todoList = this.state.todoList
       todoList.push(
-        {"id": this.currentId, "completed": true, "priority": 1, "content": "Task 1"})
+        { "id": this.currentId, "completed": true, "priority": 1, "content": this.refs.taskContent.value})
         this.currentId++
         this.setState({todoList:todoList})
     }
