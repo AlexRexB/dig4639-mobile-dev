@@ -20,8 +20,12 @@ class CardList extends React.Component {
     render() {
         return (
             <div>
-            {this.state.cards.map(card => <Card key={card.content} content={card.content} 
-            removeCard={ () => this.removeCard(card.content)}/>)  }
+            {this.state.cards.map(card => <Card 
+            key={card.content} 
+            title={card.title}
+            content={card.content} 
+            removeCard={ () => this.removeCard(card.content)}
+            />)  }
             </div>
         )
     }

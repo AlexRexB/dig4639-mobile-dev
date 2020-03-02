@@ -1,17 +1,14 @@
 {
     "cards": [
         {
-            "id": "1",
             "title": "Max",
             "content": "Enjoys the beach."
         },
         {
-            "id": "2",
             "title": "Maggie",
             "content": "Loves to run."
         },
         {
-            "id": "3",
             "title": "Buddy",
             "content": "Sniffs butts."
         }
