@@ -5,7 +5,9 @@ class Card extends React.Component {
     render() {
         return (
             <div className = "card">
-                {this.props.content}
+                <h3>Lab 4</h3>
+                <p>{this.props.content}</p>
+                <button value='x' className = "close" onClick={() => this.props.removeCard()} >x</button>
             </div>
         )
     }

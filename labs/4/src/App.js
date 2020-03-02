@@ -1,10 +1,10 @@
 import React from 'react';
-import Card from "./components/Card/index.js";
+import CardList from "./components/CardList/index.js";
 
 function App() {
   return (
     <div className="App">
-      <Card content="This is a card!"></Card>
+      <CardList></CardList>
     </div>
   );
 }
