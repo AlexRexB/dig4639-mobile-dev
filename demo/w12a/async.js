@@ -1,16 +1,30 @@
 console.log("Starting Timeout!")
-setTimeout(asyncFunction, 1000)
+//setTimeout(asyncFunction, 1000)
+
 function asyncFunction() {
   console.log("1 second passed, calling promise")
-  promisedOne().then(() => {console.log("After!")})
+  function asyncFunction2() {
+    console.log("3 more seconds passed")
+    function asyncFunction3() {
+      console.log("3 seconds. Whew, such a long wait.")
+    }
+    setTimeout(asyncFunction3, 3000)
+  }
+  setTimeout(asyncFunction2, 3000)
 }
 
 function promisedOne() {
   return new Promise((resolve, reject) => {
-    setTimeout(asyncFunction, 1000)
     function asyncFunction() {
       console.log("1 second passed!")
-      resolve()
+      resolve(100)
     }
+    setTimeout(asyncFunction, 1000)
   })
+}
+
+//promisedOne().then(()=>{console.log("Resolved with " + value)})
+async function iNSync() {
+  await promisedOne()
+  console.log("I'm done!!")
 }
