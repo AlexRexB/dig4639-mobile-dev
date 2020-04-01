@@ -1,9 +1,5 @@
 console.log("Starting Timeout!")
-<<<<<<< HEAD
 //setTimeout(asyncFunction, 1000)
-=======
-// setTimeout(asyncFunction, 1000)
->>>>>>> f9342ce584bfe62e6cd3bf5909924b06d4bdd276
 
 function asyncFunction() {
   console.log("1 second passed, calling promise")
@@ -29,18 +25,10 @@ function promisedOne() {
   })
 }
 
-<<<<<<< HEAD
-//promisedOne().then(()=>{console.log("Resolved with " + value)})
-async function iNSync() {
-  await promisedOne()
-  console.log("I'm done!!")
-}
-=======
-/* promisedOne()
+/*promisedOne()
   .then(
-    (value)=>{console.log("Resolved with " + value)})
+    (value) =>{console.log("Resolved with" + value)})
 */
-
 async function iNSync() {
   let value = await promisedOne()
   console.log("I'm done!!" + value)
@@ -50,4 +38,3 @@ async function iNSync() {
   console.log("I'm done!!" + value)
 }
 iNSync()
->>>>>>> f9342ce584bfe62e6cd3bf5909924b06d4bdd276
