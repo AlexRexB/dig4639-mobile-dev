@@ -11,21 +11,20 @@ class Card extends React.Component {
     )
   }
 }
-
-class App extends React.Component{
+class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {content:"", list: []}
   }
 
   async getServerData() {
-    const response = await fetch("http:localhost:3001")
+    const response = await fetch("https://official-joke-api.appspot.com/random_ten")
     console.log("Received response from server!")
     console.log(response)
     let obj = await response.json()
     console.log("Processed response as JSON: ", obj)
-    this.setState({content:obj.b})
-    this.setState({list:obj.list})
+    // this.setState({content:obj.b})
+    this.setState({list:obj})
   }
 
   componentDidMount() {
@@ -37,7 +36,7 @@ class App extends React.Component{
       <div>
         <p>{this.state.content}</p>
         {this.state.list.map((listObject, index) =>
-        <Card key={index} title={listObject.title}>{listObject.content}</Card>
+        <Card key={index} title={listObject.setup}>{listObject.punchline}</Card>
         )}
       </div>
     );
