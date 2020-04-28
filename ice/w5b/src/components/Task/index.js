@@ -18,13 +18,9 @@ class Task {
     }
 
     onClick(e) {
-        var myString = ""
-        if(myString != "") {
-            console.log("INPUT IS TRUE");
-        }
         console.log(this);
         console.log(e.target);
-        console.log();
+        console.log(e.target.checked);
     }
 
     render() {

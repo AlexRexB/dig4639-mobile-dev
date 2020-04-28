@@ -10,19 +10,13 @@ function runOnLoad()
     input = document.getElementById("taskText");
     // Handle adding a new task
     var addTaskButton = document.getElementById("addTask");
-    addTaskButton.addEventListener("click", onClick);
+    addTaskButton.addEventListener("click", onClick)
 }
 
 function onClick() {
-    if (input.value != "") {
-        return;
-    }
-
     console.log("clicked!");
     var newTask = new Task({content:input.value,done:false});
-    element.appendChild(newTask.render())
-    input.value = "";
+    element.appendChild(newTask.render());
 }
 
-
-window.addEventListener("DOMContentLoaded", run0nLoad);
+window.addEventListener("DOMContentLoaded", runOnLoad);
